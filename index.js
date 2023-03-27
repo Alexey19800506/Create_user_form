@@ -1,13 +1,7 @@
 const baseUrl = 'https://63f611d99daf59d1ad81329e.mockapi.io/api/v1/user';
 
 const buttonElem = document.querySelector('.submit-button');
-//const inputForm = document.forms["login-form"];
 const formElem = document.querySelector('.login-form');
-
-
-
-
-//console.log(buttonElem.reportValidity());
 
 function getUsersList() {
     return fetch(baseUrl)
