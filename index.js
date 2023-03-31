@@ -21,7 +21,7 @@ function createUser(formData) {
 
 const onFormValidatity = () => {
  
-buttonElem.resetAttribute('disabled');
+buttonElem.removeAttribute('disabled');
  
 formElem.addEventListener('click', onFormValidatity);
 
