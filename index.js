@@ -20,13 +20,9 @@ function createUser(formData) {
 }
 
 const onFormValidatity = () => {
-
-    let isvalidate = formElem.reportValidity();
-    if (isvalidate) {
-        buttonElem.resetAttribute('disabled');
-    }
-}
-
+ 
+buttonElem.resetAttribute('disabled');
+ 
 formElem.addEventListener('click', onFormValidatity);
 
 const onFormSubmit = event => {
