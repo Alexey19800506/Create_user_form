@@ -4,6 +4,7 @@ const buttonElem = document.querySelector('.submit-button');
 const formElem = document.querySelector('.login-form');
 
 function getUsersList() {
+    formElem.reset();
     return fetch(baseUrl)
         .then(response => response.json())
         .then(result => alert(JSON.stringify(result)));
