@@ -19,11 +19,14 @@ function createUser(formData) {
     });
 }
 
-const onFormValidatity = () => {
- 
-buttonElem.removeAttribute('disabled');
- 
-formElem.addEventListener('click', onFormValidatity);
+const onFormValidity = event => {
+    event.preventDefault();
+    if (formElem.reportValidity()) {
+        buttonElem.removeAttribute('disabled');
+    }
+}
+
+formElem.addEventListener('input', onFormValidity);
 
 const onFormSubmit = event => {
     event.preventDefault();
