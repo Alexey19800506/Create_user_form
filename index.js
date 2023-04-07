@@ -36,9 +36,8 @@ const onFormSubmit = event => {
     createUser(formData);
 
     getUsersList();
+
+    formElem.reset();
+    buttonElem.setAttribute('disabled', false);
 }
-
-formElem.reset();
-buttonElem.setAttribute('disabled', false);
-
 formElem.addEventListener('submit', onFormSubmit);
