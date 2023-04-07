@@ -30,14 +30,16 @@ formElem.addEventListener('input', onFormValidity);
 
 const onFormSubmit = event => {
     event.preventDefault();
-    formElem.reset();
+    
     const formData = [...new FormData(formElem)].reduce((acc, [field, value]) => ({...acc, [field]: value }), {});
 
     createUser(formData);
 
     getUsersList();
 
-   
+    formElem.reset();
     buttonElem.setAttribute('disabled', false);
 }
+
+formElem.reset();
 formElem.addEventListener('submit', onFormSubmit);
