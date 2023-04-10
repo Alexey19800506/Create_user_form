@@ -6,8 +6,10 @@ const formElem = document.querySelector('.login-form');
 function getUsersList() {
     return fetch(baseUrl)
         .then(response => response.json())
-        .then(result => alert(JSON.stringify(result)))
-        .then(formElem.reset())
+        .then(result => {
+        alert(JSON.stringify(result));
+        formElem.reset(); 
+    })
 }
 
 function createUser(formData) {
