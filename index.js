@@ -38,7 +38,6 @@ const onFormSubmit = event => {
 
     getUsersList();
 
-    formElem.reset();
     buttonElem.setAttribute('disabled', false);
 }
 
