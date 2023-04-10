@@ -43,5 +43,3 @@ const onFormSubmit = event => {
 
 formElem.addEventListener('submit', onFormSubmit);
 
-formElem.reset();
-buttonElem.setAttribute('disabled', false);
